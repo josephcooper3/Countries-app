@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     el: '#app',
     data: {
       countries: [],
+      countrySelected: null
     },
     mounted(){
       this.fetchCountries();

@@ -10,6 +10,17 @@
 <body>
   <main id="app">
     
+    <label for="country-select">Choose a country:</label>
+    <select id="country-select" v-model="countrySelected">
+      <option value="">--Please select a country--</option>
+      <option v-for="country in countries" v-bind:value="country">{{ country.name }}</option>
+    </select>
+    
+    <div v-if="countrySelected">
+      <h2>{{ countrySelected.name }}</h2>
+      <img id="flag" v-bind:src="countrySelected.flag" alt="country flag">
+    </div>
+
   </main>
 </body>
 </html>
