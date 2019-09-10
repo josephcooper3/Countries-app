@@ -15,11 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch("https://restcountries.eu/rest/v2/all")
         .then(result => result.json())
         .then(data => this.countries = data)
-        // .then((data) => {
-        //   for (const country of data) {
-        //     this.countryNames.push(country.name);
-        //   };
-        // })
         .catch(console.error);
       }
     }
